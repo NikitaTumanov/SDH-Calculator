@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox fx:id="calculatorPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sdhcalculator.HelloController">
+
+    <Label text="Давность возникновения СДГ" styleClass="label-bottom"/>
+
+    <Label fx:id="resultLabel" text="Результат"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Назад" onAction="#onBackButtonClick"/>
+        <Button text="В начало" onAction="#onHomeButtonClick"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,56 @@
+.root {
+    -fx-background-color: #E5E5E5;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #323232;
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+
+.label-bottom {
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.text-field {
+    -fx-text-fill: #323232;
+    -fx-background-color: #cfcfcf;
+    -fx-background-radius: 10px;  /* Закруглённые углы */
+    -fx-border-color: black;    /* Цвет границы */
+    -fx-border-radius: 10px;
+}
+
+.text-field:hover {
+    -fx-border-color: #63B175;
+    -fx-effect: dropshadow(gaussian, #63B175, 10, 0.5, 0, 0);
+}
+
+.text-field:focused {
+    -fx-border-color: #63B175;
+    -fx-effect: dropshadow(gaussian, #63B175, 10, 0.5, 0, 0);
+}
+
+.button {
+    -fx-font-size: 16px;          /* Размер шрифта */
+    -fx-text-fill: white;         /* Цвет текста */
+    -fx-background-color: #535353; /* Фиолетовый фон */
+    -fx-background-radius: 20px;  /* Закруглённые углы */
+    -fx-border-color: black;    /* Цвет границы */
+    -fx-border-radius: 20px;
+}
+.button:hover {
+    -fx-background-color: #63B175; /* Цвет при наведении */
+}
+
+.disabled-button {
+    -fx-background-color: rgb(170, 170, 170);
+}
+
+.disabled-button:hover {
+    -fx-background-color: rgb(170, 170, 170);
+}

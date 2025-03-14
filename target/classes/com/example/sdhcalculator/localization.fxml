@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox fx:id="localizationPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sdhcalculator.HelloController">
+
+    <Label text="Локализация СДГ" styleClass="label-bottom"/>
+    <Button text="Периферическая" onAction="#onPeripheralButtonClick"/>
+    <Button text="Межполушарная" onAction="#onInterhemisphericButtonClick" styleClass="disabled-button"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Назад" onAction="#onBackButtonClick"/>
+        <Button text="В начало" onAction="#onHomeButtonClick"/>
+    </HBox>
+</VBox>

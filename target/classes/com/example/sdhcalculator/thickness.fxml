@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox fx:id="thicknessPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sdhcalculator.HelloController">
+
+    <Label text="Толщина СДГ в аксиальной проекции" styleClass="label-bottom"/>
+    <Button text="&lt; 1 см" onAction="#onLessOneButtonClick"/>
+    <Button text="≥ 1 см (до 48 ч)" onAction="#onOverOneButtonClick"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Назад" onAction="#onBackButtonClick"/>
+        <Button text="В начало" onAction="#onHomeButtonClick"/>
+    </HBox>
+</VBox>

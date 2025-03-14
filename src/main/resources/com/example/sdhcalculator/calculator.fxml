@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox fx:id="calculatorPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sdhcalculator.HelloController">
+
+    <Label text="КТ плотность в аксиальной проекции (ед.Н)" styleClass="label-bottom"/>
+
+    <GridPane xmlns:fx="http://javafx.com/fxml" hgap="10" vgap="10" alignment="CENTER">
+        <Label fx:id="firstValueLabel" text="Первое значение переменной" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstValue" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label fx:id="secondValueLabel" text="Второе значение переменной" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="secondValue" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label fx:id="thirdValueLabel" text="Третье значение переменной" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="thirdValue" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label fx:id="fourthValueLabel" text="Четвертое значение переменной" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="fourthValue" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label fx:id="errorLabel" styleClass="error-label"/>
+    <Button text="Рассчитать" onAction="#calculateButtonClick"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Назад" onAction="#onBackButtonClick"/>
+        <Button text="В начало" onAction="#onHomeButtonClick"/>
+    </HBox>
+</VBox>
