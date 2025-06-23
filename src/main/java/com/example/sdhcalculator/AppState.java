@@ -64,3 +64,4 @@ public class AppState {
         this.fourthValueLabelText = fourthValueLabelText;
     }
 }
+//(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved

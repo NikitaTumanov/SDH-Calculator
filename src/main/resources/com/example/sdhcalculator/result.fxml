@@ -8,7 +8,7 @@
 <VBox fx:id="calculatorPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.sdhcalculator.HelloController">
 
-    <Label text="Давность возникновения СДГ" styleClass="label-bottom"/>
+    <Label text="Давность возникновения СДГ (час)" styleClass="label-bottom"/>
 
     <Label fx:id="resultLabel" text="Результат"/>
 
@@ -17,3 +17,4 @@
         <Button text="В начало" onAction="#onHomeButtonClick"/>
     </HBox>
 </VBox>
+<!--(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved-->

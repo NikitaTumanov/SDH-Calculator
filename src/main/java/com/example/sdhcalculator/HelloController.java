@@ -36,8 +36,8 @@ public class HelloController implements Initializable {
 
     @FXML
     VBox mainPane;
-    @FXML
-    VBox localizationPane;
+    /*@FXML
+    VBox localizationPane;*/
     @FXML
     VBox thicknessPane;
     @FXML
@@ -72,9 +72,9 @@ public class HelloController implements Initializable {
         try {
             if (mainPane != null) {
                 currentPane = mainPane;
-            } else if (localizationPane != null) {
+            } /*else if (localizationPane != null) {
                 currentPane = localizationPane;
-            } else if (thicknessPane != null) {
+            }*/ else if (thicknessPane != null) {
                 currentPane = thicknessPane;
             } else if (prescriptionPane != null) {
                 currentPane = prescriptionPane;
@@ -95,22 +95,22 @@ public class HelloController implements Initializable {
     public void onStartButtonClick() throws IOException {
         ViewState.getInstance().getViewHistory().push("main.fxml");
 
-        Parent nextPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("localization.fxml")));
+        Parent nextPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("thickness.fxml")));
         mainPane.getChildren().setAll(nextPane);
     }
 
-    @FXML
+    /*@FXML
     public void onPeripheralButtonClick() throws IOException {
         ViewState.getInstance().getViewHistory().push("localization.fxml");
 
         Parent nextPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("thickness.fxml")));
         localizationPane.getChildren().setAll(nextPane);
-    }
+    }*/
 
-    @FXML
+    /*@FXML
     public void onInterhemisphericButtonClick() {
         //TODO
-    }
+    }*/
 
     @FXML
     public void onLessOneButtonClick() throws IOException {
@@ -124,9 +124,9 @@ public class HelloController implements Initializable {
     public void onOverOneButtonClick() throws IOException {
         AppState.getInstance().setFormulaType(1);
         AppState.getInstance().setFirstValueLabelText("Толщина СДГ (см)");
-        AppState.getInstance().setSecondValueLabelText("Средн. КТ плотность площади СДГ");
-        AppState.getInstance().setThirdValueLabelText("КТ плотн. Базилярной артерии");
-        AppState.getInstance().setFourthValueLabelText("КТ плотн. крови в затылочной части сагиттального синуса");
+        AppState.getInstance().setSecondValueLabelText("Средняя КТ плотность площади СДГ");
+        AppState.getInstance().setThirdValueLabelText("КТ плотность Базилярной артерии");
+        AppState.getInstance().setFourthValueLabelText("КТ плотность крови в затылочной части сагиттального синуса");
 
         ViewState.getInstance().getViewHistory().push("thickness.fxml");
 
@@ -137,10 +137,10 @@ public class HelloController implements Initializable {
     @FXML
     public void onLessFortyEightButtonClick() throws IOException {
         AppState.getInstance().setFormulaType(2);
-        AppState.getInstance().setFirstValueLabelText("Средн. КТ плотность площади СДГ");
-        AppState.getInstance().setSecondValueLabelText("Мин. КТ плотн. площади СДГ");
-        AppState.getInstance().setThirdValueLabelText("Макс. КТ плотн. площади СДГ");
-        AppState.getInstance().setFourthValueLabelText("КТ плотн. крови в затылочной части сагиттального синуса");
+        AppState.getInstance().setFirstValueLabelText("Средняя КТ плотность площади СДГ");
+        AppState.getInstance().setSecondValueLabelText("Минимальная КТ плотность площади СДГ");
+        AppState.getInstance().setThirdValueLabelText("Максимальная КТ плотность площади СДГ");
+        AppState.getInstance().setFourthValueLabelText("КТ плотность крови в затылочной части сагиттального синуса");
 
         ViewState.getInstance().getViewHistory().push("prescription.fxml");
 
@@ -151,10 +151,10 @@ public class HelloController implements Initializable {
     @FXML
     public void onOverFortyEightButtonClick() throws IOException {
         AppState.getInstance().setFormulaType(3);
-        AppState.getInstance().setFirstValueLabelText("Средн. КТ плотность площади СДГ");
-        AppState.getInstance().setSecondValueLabelText("Мин. КТ плотн. площади СДГ");
-        AppState.getInstance().setThirdValueLabelText("Макс. КТ плотн. площади СДГ");
-        AppState.getInstance().setFourthValueLabelText("КТ плотн. крови в затылочной части сагиттального синуса");
+        AppState.getInstance().setFirstValueLabelText("Средняя КТ плотность площади СДГ");
+        AppState.getInstance().setSecondValueLabelText("Минимальная КТ плотность площади СДГ");
+        AppState.getInstance().setThirdValueLabelText("Максимальная КТ плотность площади СДГ");
+        AppState.getInstance().setFourthValueLabelText("КТ плотность крови в затылочной части сагиттального синуса");
 
         ViewState.getInstance().getViewHistory().push("prescription.fxml");
 
@@ -196,17 +196,17 @@ public class HelloController implements Initializable {
             case 1:
                 result = 0.80376184*secondVal - 1.59361133*firstVal  +
                         0.84611881*thirdVal - 0.7687774*fourthVal - 38.01761064277179;
-                AppState.getInstance().setResult(result);
+                AppState.getInstance().setResult(Math.round(result * 100.0) / 100.0);
                 break;
             case 2:
                 result = 0.71876509*firstVal - 0.10202001*secondVal +
                         0.13755295*thirdVal - 1.53616305*fourthVal + 30.687518541773446;
-                AppState.getInstance().setResult(result);
+                AppState.getInstance().setResult(Math.round(result * 100.0) / 100.0);
                 break;
             case 3:
                 result = 32.89308042*firstVal - 23.04789161*secondVal -
                         13.67184965*thirdVal + 4.02812587*fourthVal + 15.872744755239239;
-                AppState.getInstance().setResult(result);
+                AppState.getInstance().setResult(Math.round(result * 100.0) / 100.0);
                 break;
             default:
                 errorLabel.setText("Извините, что-то пошло не так!");
@@ -239,3 +239,4 @@ public class HelloController implements Initializable {
         }
     }
 }
+//(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved

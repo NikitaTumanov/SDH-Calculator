@@ -17,3 +17,4 @@ public class ViewState {
         return viewHistory;
     }
 }
+//(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved

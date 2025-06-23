@@ -17,3 +17,4 @@
         <Button text="В начало" onAction="#onHomeButtonClick"/>
     </HBox>
 </VBox>
+<!--(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved-->

@@ -26,3 +26,4 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+//(с) 2025 Tumanov Nikita Alekseevich All Rights Reserved

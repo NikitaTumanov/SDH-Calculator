@@ -9,7 +9,7 @@
 <VBox fx:id="mainPane" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.sdhcalculator.HelloController">
 
-    <Label text="Давность СДГ по КТ" styleClass="label-bottom"/>
+    <Label text="Давность субдуральной гематомы (СДГ) по КТ" styleClass="label-bottom"/>
 
     <ImageView>
         <Image url="@brain.png" />
